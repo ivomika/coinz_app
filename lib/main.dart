@@ -1,8 +1,5 @@
-import 'package:coinz_app/ui/kit/base/text/body_medium.dart';
-import 'package:coinz_app/ui/kit/base/text/body_small.dart';
-import 'package:coinz_app/ui/kit/base/text/caption.dart';
-import 'package:coinz_app/ui/kit/base/text/title_large.dart';
-import 'package:coinz_app/ui/kit/base/text/title_medium.dart';
+import 'package:coinz_app/ui/kit/base/constants/offset.dart';
+import 'package:coinz_app/ui/kit/molecule/sub_title/sub_title.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 
@@ -38,14 +35,19 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
-      body: const Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TitleLarge('Flutter coinz'),
-          TitleMedium('Flutter coinz'),
-          BodyMedium('Flutter coinz'),
-          BodySmall('Flutter coinz'),
-          Caption('Flutter coinz')
+          SubTitle(
+            title: 'Coinz Title',
+            actions: [
+              IconButton(
+                  onPressed: (){},
+                  splashRadius: OffsetConstants.normal.size,
+                  icon: const Icon(Icons.add)
+              )
+            ],
+          )
         ],
       )
     );
