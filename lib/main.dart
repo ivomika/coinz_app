@@ -1,3 +1,9 @@
+import 'package:coinz_app/ui/kit/base/text/body_medium.dart';
+import 'package:coinz_app/ui/kit/base/text/body_small.dart';
+import 'package:coinz_app/ui/kit/base/text/caption.dart';
+import 'package:coinz_app/ui/kit/base/text/title_large.dart';
+import 'package:coinz_app/ui/kit/base/text/title_medium.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter coinz',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: FlexThemeData.light(scheme: FlexScheme.deepBlue),
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.deepBlue),
+      themeMode: ThemeMode.system,
       home: const MyHomePage(title: 'Flutter coinz'),
     );
   }
@@ -33,8 +38,15 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
-      body: const Center(
-        child: Text('Flutter coinz')
+      body: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TitleLarge('Flutter coinz'),
+          TitleMedium('Flutter coinz'),
+          BodyMedium('Flutter coinz'),
+          BodySmall('Flutter coinz'),
+          Caption('Flutter coinz')
+        ],
       )
     );
   }
