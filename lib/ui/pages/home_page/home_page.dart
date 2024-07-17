@@ -7,14 +7,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-              'Главная',
+          title: Text('Главная',
               style: Theme.of(context).textTheme.titleMedium?.apply(
-                  color: Theme.of(context).appBarTheme.foregroundColor
-              )
-          ),
+                  color: Theme.of(context).appBarTheme.foregroundColor)),
         ),
-        body: const CircularProgressIndicator()
+        body: const Center(
+            child: CircularProgressIndicator()
+        )
     );
   }
 }

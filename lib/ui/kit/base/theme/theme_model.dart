@@ -7,7 +7,7 @@ class ThemeModel{
   static ThemeData get dark => _getDarkData();
   static ThemeMode get mode => ThemeMode.system;
 
-  static _getLightData() {
+  static ThemeData _getLightData() {
     return FlexThemeData.light(
       scheme: FlexScheme.blueM3,
       useMaterial3: true,
@@ -24,8 +24,8 @@ class ThemeModel{
     );
   }
 
-  static _getDarkData() {
-    FlexThemeData.dark(
+  static ThemeData _getDarkData() {
+    return FlexThemeData.dark(
       scheme: FlexScheme.blueM3,
       useMaterial3: true,
     ).copyWith(
