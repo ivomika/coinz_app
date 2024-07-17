@@ -1,5 +1,4 @@
 import 'package:coinz_app/ui/kit/base/constants/offset.dart';
-import 'package:coinz_app/ui/kit/base/text/title_medium.dart';
 import 'package:flutter/material.dart';
 
 class SubTitle extends StatelessWidget {
@@ -25,7 +24,7 @@ class SubTitle extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            TitleMedium(title),
+            Text(title, style: Theme.of(context).textTheme.titleMedium,),
             ...actions.map((element) => Padding(
                 padding: EdgeInsets.only(
                     left: OffsetConstants.small.size
