@@ -1,3 +1,4 @@
+import 'package:coinz_app/ui/kit/molecule/pin_input/pin_input.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
                   color: Theme.of(context).appBarTheme.foregroundColor)),
         ),
         body: const Center(
-            child: CircularProgressIndicator()
+            child: PinInput()
         )
     );
   }
