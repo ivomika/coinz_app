@@ -11,6 +11,8 @@ class ThemeModel{
     return FlexThemeData.light(
       scheme: FlexScheme.blueM3,
       useMaterial3: true,
+      background: const Color(0xFFF8F9FC),
+      surface: const Color(0xFFF8F9FC)
     ).copyWith(
         filledButtonTheme: FilledButtonThemeData(
             style: ButtonStyle(
@@ -28,6 +30,8 @@ class ThemeModel{
     return FlexThemeData.dark(
       scheme: FlexScheme.blueM3,
       useMaterial3: true,
+      background: const Color(0xFF1A1B1C),
+      surface: const Color(0xFF1A1B1C),
     ).copyWith(
         filledButtonTheme: FilledButtonThemeData(
             style: ButtonStyle(
