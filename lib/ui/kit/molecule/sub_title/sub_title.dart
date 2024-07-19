@@ -22,15 +22,10 @@ class SubTitle extends StatelessWidget {
       ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(title, style: Theme.of(context).textTheme.titleMedium,),
-            ...actions.map((element) => Padding(
-                padding: EdgeInsets.only(
-                    left: OffsetConstants.small.size
-                ),
-                child: element,
-            ))
+            const Spacer(),
+            ...actions
           ],
         ),
       ),
