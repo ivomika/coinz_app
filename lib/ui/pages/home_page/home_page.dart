@@ -1,4 +1,7 @@
-import 'package:coinz_app/ui/kit/molecule/pin_input/pin_input.dart';
+import 'package:coinz_app/ui/kit/base/constants/offset.dart';
+import 'package:coinz_app/ui/kit/molecule/cart_balance/cart_balance.dart';
+import 'package:coinz_app/ui/kit/molecule/sub_title/sub_title.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,8 +15,30 @@ class HomePage extends StatelessWidget {
               style: Theme.of(context).textTheme.titleMedium?.apply(
                   color: Theme.of(context).appBarTheme.foregroundColor)),
         ),
-        body: const Center(
-            child: PinInput()
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(
+                  OffsetConstants.normal.size
+                ),
+                child: const CartBalance(
+                  title: '**** **** **** 1234',
+                  balance: 3000.99,
+                ),
+              ),
+              SubTitle(
+                  title: 'История',
+                  actions: [
+                    IconButton(
+                        onPressed: (){},
+                        icon: const Icon(Icons.add)
+                    ),
+                  ],
+              )
+            ],
+          ),
         )
     );
   }
