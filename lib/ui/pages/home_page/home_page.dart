@@ -1,7 +1,6 @@
 import 'package:coinz_app/ui/kit/base/constants/offset.dart';
 import 'package:coinz_app/ui/kit/molecule/cart_balance/cart_balance.dart';
 import 'package:coinz_app/ui/kit/molecule/sub_title/sub_title.dart';
-import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,9 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Главная',
-              style: Theme.of(context).textTheme.titleMedium?.apply(
-                  color: Theme.of(context).appBarTheme.foregroundColor)),
+          title: const Text('Главная'),
         ),
         backgroundColor: Theme.of(context).colorScheme.surface,
         body: SingleChildScrollView(
