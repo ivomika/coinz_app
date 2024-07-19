@@ -22,5 +22,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-assets:
-  'assets/'
+  assets:
+    - assets/svg/patterns/pattern_1.svg
+    - assets/svg/patterns/pattern_2.svg
+    - assets/svg/patterns/pattern_3.svg
+    - assets/svg/patterns/pattern_4.svg
+    - assets/svg/patterns/pattern_5.svg
